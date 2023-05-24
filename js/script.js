@@ -20,16 +20,18 @@ $(document).ready(function () {
 		$('.wsmenucontainer').toggleClass( "mrginleft" );
 	});
 
-	$('.wsmenu-list li').has('.wsmenu-submenu, .wsmenu-submenu-sub, .wsmenu-submenu-sub-sub').prepend('<span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span>');
+	$('.wsmenu-list li').has('.wsmenu-submenu, .wsmenu-submenu-sub, .wsmenu-submenu-sub-sub, .megamenu').prepend('<span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span>');
+	$('.megamenu li').has('.submenu, .submenu-sub').prepend('<span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span>');
 	$('.wsmenu-mobile').click(function(){
 		$('.wsmenu-list').slideToggle('slow');
 	});
 	$('.wsmenu-click').click(function(){
 		$(this).siblings('.wsmenu-submenu').slideToggle('slow').parent('li').siblings().children('.wsmenu-submenu, .megamenu').slideUp('slow');
-		$(this).children('.wsmenu-arrow').toggleClass('wsmenu-rotate');
+		$(this).children('.wsmenu-arrow').toggleClass('wsmenu-rotate').parents('li').siblings().children('.wsmenu-click').children('.wsmenu-arrow').removeClass('wsmenu-rotate');
 		$(this).siblings('.wsmenu-submenu-sub').slideToggle('slow');
 		$(this).siblings('.wsmenu-submenu-sub-sub').slideToggle('slow');
 		$(this).siblings('.megamenu').slideToggle('slow').parent('li').siblings().children('.wsmenu-submenu, .megamenu').slideUp('slow');
+		$(this).siblings('.submenu-sub').slideToggle('slow').parents('.submenu').siblings().find('.submenu-sub').slideUp('slow').siblings('.wsmenu-click').children('.wsmenu-arrow').removeClass('wsmenu-rotate');
 	});
 	
 	$(window).scroll(function(){
@@ -164,6 +166,7 @@ $(document).ready(function () {
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	});
+	
 	var swiper2 = new Swiper(".store_box", {
 		effect: 'fade',
 		fadeEffect: {
@@ -184,9 +187,14 @@ $(document).ready(function () {
 		freeMode: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
 	});
 	var swiper2 = new Swiper(".product_box", {
 		effect: 'fade',
+		loop: true,
 		fadeEffect: {
 			crossFade: true
 		},
@@ -194,6 +202,10 @@ $(document).ready(function () {
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
 		},
 		thumbs: {
 			swiper: swiper,

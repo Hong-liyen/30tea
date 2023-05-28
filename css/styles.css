@@ -3169,8 +3169,8 @@ footer.footer li span:first-child:after {
   }
   /*//標題*/
   .index{
-    background: url(../images/bg.png) center 55% / 80% no-repeat,
-    url(../images/prd_bg.png) left 25% / 100% no-repeat,
+    background: url(../images/bg.png) center 2500px / 80% no-repeat,
+    url(../images/prd_bg.png) left 1150px / 100% no-repeat,
     url(../images/cover_bg.png) repeat;
   }
   .container {
@@ -6755,8 +6755,8 @@ footer.footer li span:first-child:after {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .index{
-    background: url(../images/bg.png) center 45% / contain no-repeat,
-    url(../images/prd_bg.png) left 28% / contain no-repeat,
+    background: url(../images/bg.png) center 1400px / contain no-repeat,
+    url(../images/prd_bg.png) left 1100px / contain no-repeat,
     url(../images/cover_bg.png) repeat;
   }
   .index_service .container{
@@ -7443,8 +7443,8 @@ footer.footer li span:first-child:after {
     font-weight: 400;
   }
   .index{
-    background: url(../images/bg.png) center 30% / contain no-repeat,
-    url(../images/prd_bg.png) left 20% / contain no-repeat,
+    background: url(../images/bg.png) center 1200px / contain no-repeat,
+    url(../images/prd_bg.png) left 1000px / contain no-repeat,
     url(../images/cover_bg.png) repeat;
   }
   .index_og{
@@ -7460,7 +7460,7 @@ footer.footer li span:first-child:after {
   }
   .og_left2{
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 0;
   }
   .og_left3{
@@ -7557,8 +7557,8 @@ footer.footer li span:first-child:after {
     overflow: hidden;
   }
   .index{
-    background: url(../images/bg.png) center 30% / contain no-repeat,
-    url(../images/prd_bg.png) left 15% / contain no-repeat,
+    background: url(../images/bg.png) center 1000px / contain no-repeat,
+    url(../images/prd_bg.png) left 800px / contain no-repeat,
     url(../images/cover_bg.png) repeat;
   }
   .customized > div:not(:first-child):before{
@@ -7635,13 +7635,20 @@ footer.footer li span:first-child:after {
     min-height: 580px;
   }
   .index_prd .show-box-wrap .swiper-slide img{
-    max-width: 150px;
+    max-width: 120px;
   }
   .product-detail .info .title{
-    font-size: 16px;
+    font-size: 14px;
   }
   .product-detail .info .txt{
     font-size: 14px;
+  }
+  footer.footer ul{
+    letter-spacing: 0;
+    font-size: 10px;
+  }
+  .right_txt{
+    margin-top: 150px;
   }
 }
 
